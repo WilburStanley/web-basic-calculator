@@ -1,0 +1,128 @@
+:root {
+    --body-color: #f2f2f2;
+    --calculator-color: #2a9d8f;
+    --inputColor: white;
+    --btn-background-color: white;
+    --btn-text-color: black;
+    --operator-background-color: #264653;
+    --equal-btn-background-color: #e76f51;
+    --ac-btn-backgroud-color: #e76f51;
+    --negative-btn-background-color: #e0e0e0;
+    --backspace-btn-background-color: #e0e0e0;
+}
+body {
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+    background-color: var(--body-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+header {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-style: bold;
+    color: black;
+    padding: 10px;
+    width: fit-content;
+    cursor: default;
+    background-color: white;
+}
+header:hover {
+    color: var(--red);
+} 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.subContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 5px solid black;
+    box-shadow: 1px 2px 0px 0px black;
+    background-color: var(--calculator-color);
+}
+input {
+    font-family: inherit;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: bold;
+    text-align: right;
+    color: black;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    padding-right: 40px;
+    border-top: none;
+    border-bottom: 5px solid black;
+    background-color: var(--inputColor);
+}
+input:focus {
+    outline: none;
+}
+.box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    height: 400px;
+    width: 95%;
+    padding: 15px;
+}
+.btn {
+    font-family: inherit;
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 10px; 
+    color: black;
+    cursor: pointer;
+    background-color: var(--btn-background-color);
+    color: var(--btn-text-color);
+    box-shadow: 2px 3px 0px 0px black;
+    transition: 
+        background-color 0.2s,
+        color 0.2s,
+        transform 0.1s,
+        box-shadow 0.1s;
+}
+.btn:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 1px 2px 0px 0px black;
+}
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: 0px 1px 0px 0px black;
+}
+.btn:focus {
+    background-color: black;
+    color: white;
+    outline: none;
+}
+.operatorBtn {
+    background-color: var(--operator-background-color);
+    color: white;
+}
+#equal_btn {
+    background-color: var(--equal-btn-background-color);
+}
+#ac_btn {
+    background-color: var(--ac-btn-backgroud-color);
+    color: white;
+}
+#negative_btn {
+    background-color: var(--negative-btn-background-color);
+    color: black;
+}
+#backspace_btn {
+    background-color: var(--backspace-btn-background-color);
+    color: black;
+}
